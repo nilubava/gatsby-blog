@@ -1,6 +1,5 @@
 {
-    "cleanUrls": true,
-    "trailingSlash": false,
+    //"cleanUrls": true,
     "rewrites": [
         {
             "source": "/docs2/:any*",
