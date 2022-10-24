@@ -1,8 +1,0 @@
-{
-    "rewrites": [
-        {
-            "source": "/docs2/:any*",
-            "destination": "https://prisma2-docs.vercel.app/:any*"
-          }
-    ]
-}
