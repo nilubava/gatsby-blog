@@ -1,5 +1,5 @@
 module.exports = {
-  trailingSlash: 'never',
+  trailingSlash: false,
   siteMetadata: {
     title: `Gatsby Starter Blog`,
     author: {
