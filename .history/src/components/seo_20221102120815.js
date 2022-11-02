@@ -30,7 +30,7 @@ const Seo = ({ description, lang, title, children }) => {
   const location = useLocation()
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-  let canonicalUrl = `https://sample-web-pi.vercel.app/test-blog${location.pathname}`
+  let canonicalUrl = `https://sample-web-pi.vercel.app${location.pathname}`
   return (
     <>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
