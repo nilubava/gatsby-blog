@@ -8,6 +8,8 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { useLocation } from '@reach/router'
+
 
 const Seo = ({ description, lang, title, children }) => {
   const { site } = useStaticQuery(
@@ -25,10 +27,10 @@ const Seo = ({ description, lang, title, children }) => {
       }
     `
   )
-
+  const location = useLocation()
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-
+  let canonicalUrl = `https://sample-web-pi.vercel.app${location.pathname}`
   return (
     <>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
@@ -43,6 +45,7 @@ const Seo = ({ description, lang, title, children }) => {
       />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
+      <link rel="canonical" href={canonicalUrl} />
       {children}
     </>
   )
