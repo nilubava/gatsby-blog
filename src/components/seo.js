@@ -45,7 +45,6 @@ const Seo = ({ description, lang, title, children }) => {
       />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      <link rel="canonical" href={canonicalUrl} />
       {children}
     </>
   )
